@@ -62,13 +62,6 @@ for i,j in table_list.items():
         print("s3_full_path",s3_full_path)                
         snowflake_df.write.mode('append').parquet(s3_full_path)
         print("file write succesfully to s3 path",s3_full_path)
-        
-#ADDED COMMON TABLE FOR REFERENCE
-#PUB_HCP_DIM -prognos,apld,kmbhalert1,kmbhalert2,kmbhalert3
-#PUB_HCP_ATTR_DIM -prognos,apld
-#PUB_PROD_DIM -nonsourceretail,apld,ics
-#PUB_HCO_LCNSE_DIM - ics,nonsourceretail
-#PUB_HCO_DIM - ics,nonsourceretail
-#PUB_HCO_ADDR_DIM - ics,nonsourceretail    
+
 
 # table_list = {'apld':{"path":"/symphony/apld/","data_src_nm":"SHS-APLD-WKLY","table_list":["PUB_DRG_PROD_BRDG_DIM","PUB_PTNT_DIM","PUB_RX_CLM_FCT","PUB_HCP_ADDR_DIM","PUB_PX_CLM_FCT","PUB_PROC_DIM","PUB_HCP_LCNSE_DIM","PUB_SX_CLM_FCT","PUB_DIAG_DIM","PUB_PTNT_ACTVTY_FCT","PUB_PTNT_MDCR_PRT_D_FCT","PUB_PLAN_DIM","PUB_HCP_ROLE_DIM","PUB_SRGCL_DIM","PUB_DX_CLM_FCT"]},"common_apld1":{"path":"/common/dimension/","data_src_nm":"SHS-APLD-WKLY","table_list":["PUB_HCP_DIM"]},"common_apld2":{"path":"/common/dimension/","data_src_nm":"SHS-APLD-WKLY","table_list":["PUB_HCP_ATTR_DIM"]},"common_apld3":{"path":"/common/dimension/","data_src_nm":"SHS-APLD-WKLY","table_list":["PUB_PROD_DIM"]}}
