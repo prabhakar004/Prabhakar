@@ -32,7 +32,7 @@ SNOWFLAKE_SOURCE_NAME = "net.snowflake.spark.snowflake"
 logger = cdl_lib.initiate_logger()
 
 # ------------- HARDCODED for now -------------
-myThreads = 6
+myThreads = 8
 db_creds = {}
 sf_db_creds = {}
 secret_id_rds = "gmb_cdl_postgres"
